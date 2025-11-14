@@ -1,4 +1,4 @@
-created by ChatGPT-5.1, because i'm too lazy
+created by ChatGPT-5.1 because i'm too lazy
 
 
 
@@ -144,3 +144,4 @@ OSCdef.new(\handR, { |msg| ~rightValue = msg[1]; }, '/hand/right');
 
 * Reduce camera resolution.
 * Disable drawing if not needed.
+
