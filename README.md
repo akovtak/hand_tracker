@@ -2,6 +2,7 @@ README was created by ChatGPT-5.1 because i'm too lazy
 
 demo: https://youtu.be/WQ7iQC82YpA
 
+
 # Hand Tracker README
 
 ## Overview
@@ -141,6 +142,7 @@ OSCdef.new(\handR, { |msg| ~rightValue = msg[1]; }, '/hand/right');
 
 * Reduce camera resolution.
 * Disable drawing if not needed.
+
 
 
 
