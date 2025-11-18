@@ -126,7 +126,7 @@ OSCdef.new(\handR, { |msg| msg.postln; }, '/hand/right');
 
 ### Values are stuck (always 1 or always 0)
 
-* Recalibrate using `1` and `2`.
+* Recalibrate.
 * Ensure your hand is fully inside the frame.
 
 ### Lag or low FPS
@@ -138,5 +138,6 @@ OSCdef.new(\handR, { |msg| msg.postln; }, '/hand/right');
 --
 
 in this project i use tip_to_mcp for left hand to control synths parameters, and for right hand i use avg_tip_to_wrist to control value
+
 
 
