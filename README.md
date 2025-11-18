@@ -99,29 +99,20 @@ Each value is a float between **0 and 1**.
 | --- | --------------------- |
 | `q` | Quit application      |
 | `c` | Clear calibration     |
-| `1` | Calibrate OPEN hand   |
-| `2` | Calibrate CLOSED hand |
+| `3` | Calibrate L hand max  |
+| `4` | Calibrate L hand min |
+| `5` | Calibrate R hand max |
+| `6` | Calibrate R hand min |
 
 Calibration sets min/max ranges for normalization.
-
----
-
-## Project Structure
-
-```
-hand_tracker/
-├── hand_tracker.py
-├── README.md (this file)
-└── requirements.txt
-```
 
 ---
 
 ## Typical SuperCollider Usage Example
 
 ```supercollider
-OSCdef.new(\handL, { |msg| ~leftValue = msg[1]; }, '/hand/left');
-OSCdef.new(\handR, { |msg| ~rightValue = msg[1]; }, '/hand/right');
+OSCdef.new(\handL, { |msg| msg.postln; }, '/hand/left');
+OSCdef.new(\handR, { |msg| msg.postln; }, '/hand/right');
 ```
 
 ---
@@ -144,9 +135,8 @@ OSCdef.new(\handR, { |msg| ~rightValue = msg[1]; }, '/hand/right');
 * Disable drawing if not needed.
 
 
+--
 
-
-
-
+in this project i use tip_to_mcp for left hand to control synths parameters, and for right hand i use avg_tip_to_wrist to control value
 
 
