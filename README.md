@@ -1,14 +1,3 @@
-in this project i use tip_to_mcp for left hand to control synths parameters, and for right hand i use avg_tip_to_wrist to control value
-
-README was created by ChatGPT-5.1 because i'm too lazy
-
-
-demo: https://youtu.be/WQ7iQC82YpA
-
-
-
---
-
 # Hand Tracker README
 
 ## Overview
@@ -105,20 +94,29 @@ Each value is a float between **0 and 1**.
 | --- | --------------------- |
 | `q` | Quit application      |
 | `c` | Clear calibration     |
-| `3` | Calibrate L hand max  |
-| `4` | Calibrate L hand min |
-| `5` | Calibrate R hand max |
-| `6` | Calibrate R hand min |
+| `1` | Calibrate OPEN hand   |
+| `2` | Calibrate CLOSED hand |
 
 Calibration sets min/max ranges for normalization.
+
+---
+
+## Project Structure
+
+```
+hand_tracker/
+├── hand_tracker.py
+├── README.md (this file)
+└── requirements.txt
+```
 
 ---
 
 ## Typical SuperCollider Usage Example
 
 ```supercollider
-OSCdef.new(\handL, { |msg| msg.postln; }, '/hand/left');
-OSCdef.new(\handR, { |msg| msg.postln; }, '/hand/right');
+OSCdef.new(\handL, { |msg| ~leftValue = msg[1]; }, '/hand/left');
+OSCdef.new(\handR, { |msg| ~rightValue = msg[1]; }, '/hand/right');
 ```
 
 ---
@@ -132,7 +130,7 @@ OSCdef.new(\handR, { |msg| msg.postln; }, '/hand/right');
 
 ### Values are stuck (always 1 or always 0)
 
-* Recalibrate.
+* Recalibrate using `1` and `2`.
 * Ensure your hand is fully inside the frame.
 
 ### Lag or low FPS
@@ -140,3 +138,14 @@ OSCdef.new(\handR, { |msg| msg.postln; }, '/hand/right');
 * Reduce camera resolution.
 * Disable drawing if not needed.
 
+---
+
+## License
+
+This project can use **any license you prefer** (MIT, Apache 2.0, GPL, or no license if it's personal). Choose the one that matches your needs. You can tell me which one to include, and I will update it.
+
+---
+
+## Author
+
+Hand Tracking system created for Aleksandra’s performance and interaction tools.
