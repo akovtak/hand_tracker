@@ -1,15 +1,22 @@
-## Requirements
+install uv
+install python version 3.11 (powershell/terminal: uv python install 3.11)
+create virtual environment (uv venv --python 3.11)
+activate the environment (windows: .venv\Scripts\activate mac: source .venv/bin/activate)
+install libraries (uv pip install mediapipe opencv-python numpy python-osc)
 
-* **Python 3.9–3.12**
-* **uv** (for managing Python packages)
-* **OpenCV**
-* **MediaPipe**
-* **python-osc**
-* **NumPy**
+test:
+cd handtracker
+python tracker.py
 
-Install using uv:
 
-```bash
-uv pip install opencv-python mediapipe python-osc numpy
-```
+running each time:
 
+windows:
+.venv\Scripts\activate
+cd handtracker
+python tracker.py
+
+macOs:
+source .venv/bin/activate
+cd handtracker
+python tracker.py
