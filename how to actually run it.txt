@@ -1,7 +1,0 @@
-how to actually run it:
-
-1. open terminal or (power)shell
-2. write: .venv/Scripts/activate
-3. navigate to location where the python hand tracking file is
-4. write: python name_of_your_hand_tracker_file.py
-5. should work, cheers
