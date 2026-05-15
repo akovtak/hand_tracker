@@ -137,15 +137,3 @@ OSCdef.new(\handR, { |msg| ~rightValue = msg[1]; }, '/hand/right');
 
 * Reduce camera resolution.
 * Disable drawing if not needed.
-
----
-
-## License
-
-This project can use **any license you prefer** (MIT, Apache 2.0, GPL, or no license if it's personal). Choose the one that matches your needs. You can tell me which one to include, and I will update it.
-
----
-
-## Author
-
-Hand Tracking system created for Aleksandra’s performance and interaction tools.
